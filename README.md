@@ -18,7 +18,19 @@
 ```bash
 Camera-Management-Microservice
 ├── apps
-│   ├── cameraManagementMicroservice
+│   ├── testService
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── migrations
+    │   ├── models.py
+    │   └── v1
+    │       ├── admin.py
+    │       ├── serializers.py
+    │       ├── services.py
+    │       ├── tests.py
+    │       ├── urls.py
+    │       └── views.py
+    ├── healthcheck
     │   ├── admin.py
     │   ├── apps.py
     │   ├── migrations

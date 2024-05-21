@@ -37,4 +37,5 @@ urlpatterns = [
     re_path(prefix + r'swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     # path(prefix + 'student/', include("apps.student_api.api.v1.urls")), # Standard
     path(prefix + '', include("apps.healthcheck.v1.urls")), # healthcheck Services
+    path(prefix + '', include("apps.testServices.v1.urls")), # healthcheck Services
 ]

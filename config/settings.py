@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework_simplejwt.token_blacklist',
     'apps.healthcheck.apps.HealthcheckConfig',
+    'apps.testServices.apps.TESTservicesConfig',
 ]
 
 MIDDLEWARE = [
@@ -90,16 +91,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
   "default": {
     "ENGINE": "mysql.connector.django",
-    "NAME": "CAMERA_AI",
+    "NAME": "TEST",
     "USER": "root",
     "PASSWORD": "Camera@12345",
     "HOST": "103.172.236.157",
     "PORT": "3306",
-    "POOL_OPTIONS": {
-      "POOL_SIZE": 20,
-      "MAX_OVERFLOW": 50,
-      "RECYCLE": 180
-    }
+    # "POOL_OPTIONS": {
+    #   "POOL_SIZE": 20,
+    #   "MAX_OVERFLOW": 50,
+    #   "RECYCLE": 180
+    # }
   }
 }
 

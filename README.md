@@ -19,41 +19,18 @@
 Camera-Management-Microservice
 ├── apps
 │   ├── cameraManagementMicroservice
-│   │   ├── districtServices
-│   │   │   ├── admin.py
-│   │   │   ├── apps.py
-│   │   │   ├── migrations
-│   │   │   ├── models.py
-│   │   │   └── v1
-│   │   │       ├── admin.py
-│   │   │       ├── serializers.py
-│   │   │       ├── services.py
-│   │   │       ├── tests.py
-│   │   │       ├── urls.py
-│   │   │       └── views.py
-│   │   └── nationServices
-│   │       ├── admin.py
-│   │       ├── apps.py
-│   │       ├── __init__.py
-│   │       ├── migrations
-│   │       │   ├── __init__.py
-│   │       ├── models.py
-│   │       └── v1
-│   │           ├── admin.py
-│   │           ├── __init__.py
-│   │           ├── migrations
-│   │           │   └── __init__.py
-│   │           ├── serializers.py
-│   │           ├── services.py
-│   │           ├── tests.py
-│   │           ├── urls.py
-│   │           └── views.py
-│   ├── __init__.py
-│   ├── logManagementMicroservice
-│   │   └── __init__.py
-│   ├── userManagementMicroservice
-│   │   └── __init__.py
-│   └── warningManagementMicroservice
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── migrations
+    │   ├── models.py
+    │   └── v1
+    │       ├── admin.py
+    │       ├── serializers.py
+    │       ├── services.py
+    │       ├── tests.py
+    │       ├── urls.py
+    │       └── views.py
+│   └── logManagementMicroservice
 │       └── __init__.py
 ├── common
 │   ├── generics.py
@@ -65,33 +42,10 @@ Camera-Management-Microservice
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-├── deployments
-│   ├── django-project
-│   │   └── Dockerfile
-│   ├── docker-compose.yml
-│   └── nginx
-│       ├── default.conf
-│       └── Dockerfile
-├── docs
-│   ├── CHANGELOG.md
-│   ├── CONTRIBUTING.md
-│   ├── deployment.md
-│   ├── local-development.md
-│   └── swagger.yaml
-├── entrypoint.sh
-├── logs
 ├── manage.py
-├── media
-├── pyproject.toml
-├── pytest.ini
+
 ├── README.md
-├── requirements
-│   ├── common.txt
-│   ├── development.txt
-│   ├── local.txt
-│   └── production.txt
-├── scripts
-└── static
+├── requirements.txt
 ```
 
 ## Rationale
@@ -149,3 +103,27 @@ environments
 
 ### `gitignore`
 * https://github.com/github/gitignore/blob/main/Python.gitignore
+
+
+### Setup
+1. Clone the repository from github.com: `git clone https://github.com/optimuskonboi/Code-Base-Django-Rest-Framework.git`.
+2. Navigate to the repository folder: - `cd Code-Base-Django-Rest-Framework`
+3. Run requirements.txt - `pip3 install -r requirements.txt`
+4. Run the Application - `python3 manage.py runserver`
+5. Go to - http://localhost:8000/
+
+### Restore Database with file: test.sql
+
+### Change Database Credentials with your Database - `config/settings.py`
+
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'your_database_name', # example - blog_data
+        'USER': 'your_mysql_user',
+        'PASSWORD': 'your_mysql_password',
+        'HOST': 'localhost',
+        'PORT': '80',
+    }
+}

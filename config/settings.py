@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'apps.healthcheck.apps.HealthcheckConfig',
     'apps.testServices.apps.TESTservicesConfig',
+    'apps.authenticatorServices.apps.AuthenticatorservicesConfig',
 ]
 
 MIDDLEWARE = [
@@ -144,7 +145,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# AUTH_USER_MODEL = 'authenticatorServices.User'
+AUTH_USER_MODEL = 'authenticatorServices.User'
 #
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (

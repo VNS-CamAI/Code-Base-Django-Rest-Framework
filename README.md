@@ -38,7 +38,19 @@ DATABASES = {
 ```bash
 Camera-Management-Microservice
 ├── apps
-│   ├── testService
+├── authenticatorServices
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── migrations
+    │   ├── models.py
+    │   └── v1
+    │       ├── admin.py
+    │       ├── serializers.py
+    │       ├── services.py
+    │       ├── tests.py
+    │       ├── urls.py
+    │       └── views.py
+    ├── testService
     │   ├── admin.py
     │   ├── apps.py
     │   ├── migrations

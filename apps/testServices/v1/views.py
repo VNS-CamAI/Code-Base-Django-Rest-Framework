@@ -56,7 +56,7 @@ class TESTViewSet(viewsets.ViewSet):
         try:
             page = request.query_params.get('page')
             size = request.query_params.get('size')
-            condition_string = "WHERE test.is IS NOT NULL"
+            condition_string = " WHERE test.id IS NOT NULL"
             param = []
             select_string = f"SELECT DISTINCT test.* FROM TEST.test"
             query_string = select_string + condition_string

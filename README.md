@@ -93,7 +93,10 @@ Camera-Management-Microservice
 ```
 ## Swagger
 ![image](https://github.com/optimuskonboi/Code-Base-Django-Rest-Framework/assets/71746399/596e1a7d-d110-427b-88bd-9c4a67c0f657)
-
+### `Login`
+![image](https://github.com/optimuskonboi/Code-Base-Django-Rest-Framework/assets/71746399/23a298d5-1e6f-403a-bc0f-62103a910e80)
+### `Use JWT`
+![image](https://github.com/optimuskonboi/Code-Base-Django-Rest-Framework/assets/71746399/aa38e55c-4212-4449-a7d4-0b916ea97519)
 
 ## Rationale
 Each `app` should be designed in way to be plug-able, that is, dragged and dropped

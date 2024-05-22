@@ -9,10 +9,6 @@
 4. Run the Application - `python3 manage.py runserver`
 5. Go to - http://localhost:8000/
 
-### Creating an App
-1. Create a folder with the app name in `apps`. For example: `testService`
-1. Run `python manage.py startapp testService apps/testService` from the root directory of the project.
-
 ### Restore Database with file: test.sql
 
 ### Change Database Credentials with your Database - `config/settings.py`
@@ -28,6 +24,11 @@ DATABASES = {
         'PORT': '80',
     }
 }
+```
+
+### Creating an App
+1. Create a folder with the app name in `apps`. For example: `testService`
+1. Run `python manage.py startapp testService apps/testService` from the root directory of the project.
 
 ## Scope
 - Goal: Develop a structure for both `django-rest-framework` and `django` projects.

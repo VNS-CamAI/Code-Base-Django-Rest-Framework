@@ -8,6 +8,7 @@
 3. Run requirements.txt - `pip3 install -r requirements.txt`
 4. Run the Application - `python3 manage.py runserver`
 5. Go to - http://localhost:8000/
+6. Swagger - http://localhost:8000/testswagger/
 
 ### Restore Database with file: test.sql
 

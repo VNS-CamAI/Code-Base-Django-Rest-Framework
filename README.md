@@ -91,6 +91,9 @@ Camera-Management-Microservice
 ├── README.md
 ├── requirements.txt
 ```
+## Swagger
+![image](https://github.com/optimuskonboi/Code-Base-Django-Rest-Framework/assets/71746399/596e1a7d-d110-427b-88bd-9c4a67c0f657)
+
 
 ## Rationale
 Each `app` should be designed in way to be plug-able, that is, dragged and dropped

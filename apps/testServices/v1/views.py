@@ -6,7 +6,7 @@ from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
 from rest_framework import status
 from rest_framework import permissions
-from common import generics_cursor
+from common import generics_cursor, custom_permission
 from .services import *
 from datetime import datetime, timezone, timedelta
 
@@ -14,7 +14,7 @@ class TESTViewSet(viewsets.ViewSet):
     """
     Interact with TEST
     """
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [custom_permission.CustomPermissions]
 
     # all swagger's parameters should be defined here 
     sw_page = openapi.Parameter(

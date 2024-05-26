@@ -102,6 +102,9 @@ Camera-Management-Microservice
 Each `app` should be designed in way to be plug-able, that is, dragged and dropped
 into any other project and it’ll work independently.
 
+## Project Struture
+- database --> views -> api -> manage.py
+
 ### `apps`
 * A mother-folder containing all apps for our project. Congruent to any JS-framework's `src` folder.
 * An app can be a django template project, or an API.

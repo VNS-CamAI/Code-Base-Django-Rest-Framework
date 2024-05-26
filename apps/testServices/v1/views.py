@@ -61,9 +61,8 @@ class TESTViewSet(viewsets.ViewSet):
             select_string = f"SELECT DISTINCT test.* FROM TEST.test"
             query_string = select_string + condition_string
             print(query_string)
-            with connection.cursor() as cursor:
-                obj = generics_cursor.getDictFromQuery(cursor, query_string, param, page, size)
-                count = len(generics_cursor.getDictFromQuery(cursor, query_string, param,'1', '100000'))
+            obj = generics_cursor.getDictFromQuery(query_string, param, page, size)
+            count = len(generics_cursor.getDictFromQuery(query_string, param,'1', '100000'))
             if obj is None:
                 return Response(data={}, status=status.HTTP_204_NO_CONTENT)
         except Exception as e:

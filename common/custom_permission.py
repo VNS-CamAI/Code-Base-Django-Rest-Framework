@@ -12,9 +12,10 @@ class CustomPermissions(permissions.BasePermission):
             if not (request.user and request.user.is_authenticated):
                 return False
             username = request.user
-            query_String=   "SELECT * FROM authenticatorServices_user WHERE is_superuser = 1 AND username = %s"
-            param = [username]
+            query_String= "SELECT * FROM authenticatorServices_user WHERE is_superuser = 1 AND username = %s"
+            param = [str(username)]
             print(query_String)
+            print(param)
             obj = generics_cursor.getDictFromQuery(query_String, param)
             if len(obj) > 0:
                 return True

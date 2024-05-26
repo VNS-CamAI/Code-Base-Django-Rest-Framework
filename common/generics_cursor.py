@@ -23,17 +23,6 @@ def getDictFromQuery(query_String:str,param:list,page:str=None,size:str=None):
     return obj
    
 
-def getDictFromQuery(cursor:object,query_String:str,param:list,page:str=None,size:str=None):
-    if page is not None:
-        query_String=query_String+" LIMIT %s OFFSET %s"
-        if size is not None:
-            param =param + [int(size), (int(page)-1)*int(size)]
-        else:
-            param =param + [pagination.PageNumberPagination.page_size, int(page)*pagination.PageNumberPagination.page_size]   
-    cursor.execute(query_String,param)
-    obj = dictfetchall(cursor)
-    return obj
-
 def getNextCode(nameTable:str,nameCode:str): 
     today = date.today()
     today=today.strftime("%Y%m%d")
@@ -55,24 +44,3 @@ def getNextCode(nameTable:str,nameCode:str):
     print("currendCode",currendCode)
     return currendCode
    
-def getNextCode(cursor:object,nameTable:str,nameCode:str):   
-    today = date.today()
-    today=today.strftime("%Y%m%d")
-
-    query_string = f"SELECT {nameCode} " \
-                    f"FROM {nameTable} " \
-                    f"WHERE SUBSTRING({nameCode},1,8)= '{today}' " \
-                    f"ORDER BY {nameCode} DESC " \
-                    f"LIMIT 1 "   
-    print(query_string)                 
-    cursor.execute(query_string)
-    obj = dictfetchall(cursor)
-    if obj is  None or len(obj)==0:
-        return today+'0'*11+'1'
-    previousCode=obj[0]["CODE"]
-    print("previousCode:",previousCode)
-    currentSTT=format(int(previousCode[8:])+1,'012d')
-    currendCode=today+currentSTT
-    print("currendCode",currendCode)
-    return currendCode
-
